@@ -1,0 +1,6 @@
+<div class="container">
+  <h4>Leave a review</h4>
+  <%= render 'form', review: [@restaurant, @review] %>
+
+  <%= link_to "back", restaurant_path(@restaurant), class: "btn btn-warning mt-3"%>
+</div>

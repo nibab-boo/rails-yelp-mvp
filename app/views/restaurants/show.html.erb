@@ -7,9 +7,14 @@
   </div>
 </div>
 <div class="container">
-  <ul class="list-group list-group-flush">
-    <% @restaurant.reviews.each do |review| %>
-      <li class="list-group-item">Cras justo odio</li>
-    <% end %>
-  </ul>
+  <% if @restaurant.reviews %>
+    <ul class="list-group list-group-flush">
+      <h4>Reviews</h4>
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item">Cras justo odio</li>
+        <span></span>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= link_to "Leave a review", new_restaurant_review_path(@restaurant), class: "btn btn-danger mt-5" %>
 </div>
