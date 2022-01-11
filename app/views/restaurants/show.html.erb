@@ -1,0 +1,15 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><%= @restaurant.name %></h1>
+    <p class="lead"><%= @restaurant.category %></p>
+    <p class="lead"><%= @restaurant.address %></p>
+    <p class="lead"><%= @restaurant.phone_number %></p>
+  </div>
+</div>
+<div class="container">
+  <ul class="list-group list-group-flush">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item">Cras justo odio</li>
+    <% end %>
+  </ul>
+</div>
